@@ -49,6 +49,6 @@ Instalar as dependencias e aplicativos
 
 TOROKI, Nicolas Meneses; Boas, Muryllo Pereira Vilas; MOREIRA, Lucas Augusto Alves. DESENVOLVIMENTO DE UM WEBSITE PARA PRATICANTES DE ESPORTES EM CAMPO LIMPO PAULISTA. 2025. 34 p.
 
-Em caso de dúvidas entre em contato com nictorokinho@hotmail.com ou com feriottodias@gmail.com
+Em caso de dúvidas entre em contato com nictorokinho@hotmail.com ou com grupo4.tcc.etecamp@gmail.com
 
 Para acessar o trabalho escrito do projeto: https://ric.cps.sp.gov.br/
