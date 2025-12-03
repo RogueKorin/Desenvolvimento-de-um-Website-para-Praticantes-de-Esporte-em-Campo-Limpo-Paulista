@@ -1,0 +1,27 @@
+/* src/styles/BotaoCriacao.css */
+
+.botao-criacao-link {
+    /* Layout e Posição (Típico botão flutuante) */
+    position: absolute; /* Ajustaremos no componente pai (Comunidades.js) */
+    top: 20px; 
+    right: 20px;
+    
+    /* Estilo e Cores */
+    display: inline-block; /* Necessário para links */
+    padding: 10px 15px;
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #28A745; /* Cor Principal */
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efeito flutuante */
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 10; /* Garante que ele fique acima de outros elementos */
+}
+
+.botao-criacao-link:hover {
+    background-color: #1e7e34; /* Tom mais escuro no hover */
+    transform: translateY(-2px);
+}

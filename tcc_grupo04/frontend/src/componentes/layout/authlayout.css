@@ -1,0 +1,43 @@
+/* src/layouts/AuthLayout/AuthLayout.css */
+
+/* 1. Container Principal (Fundo e Centralização) */
+.auth-layout-container {
+    /* Fundo cinza claro que você usa na área logada */
+    background-color: #F5F5F5; 
+    
+    /* Garante que ocupe a tela inteira */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Flexbox para centralizar vertical e horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+}
+
+/* 2. Caixa do Formulário (O Elemento Branco) */
+.auth-box {
+    background-color: white; 
+    
+    /* Configurações da caixa */
+    width: 100%;
+    max-width: 80%; /* Limita a largura para formulários (ex: 450px) */
+    padding: 3rem;
+    
+    /* Efeito visual da caixa */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para levantar a caixa */
+    
+    /* Garante que o conteúdo não se misture com as bordas */
+    box-sizing: border-box;
+}
+
+/* 3. Ajuste para o link "Voltar" no protótipo */
+/* Isso é um link/botão no topo do formulário */
+.auth-box .back-link {
+    display: block;
+    text-decoration: none;
+    color: #343A40;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}

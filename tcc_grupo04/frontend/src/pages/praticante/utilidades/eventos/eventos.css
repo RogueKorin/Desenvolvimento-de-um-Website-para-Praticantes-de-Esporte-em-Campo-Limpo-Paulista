@@ -1,0 +1,115 @@
+/* src/pages/eventos.css */
+
+/* ----------------------------------------------------- */
+/* 1. LAYOUT GERAL E BACKGROUND                           */
+/* ----------------------------------------------------- */
+.pagina-eventos {
+    background-color: #F5F5F5; /* Fundo geral claro, igual ao locais.css */
+    min-height: 100vh;
+}
+
+/* ----------------------------------------------------- */
+/* 2. HEADER/TÍTULO (Replicando o estilo do locais-header)*/
+/* ----------------------------------------------------- */
+.eventos-header {
+    background-color: #28a745; /* Cor primária do seu tema (Verde) */
+    color: #F5F5F5;
+    padding: 40px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eventos-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.eventos-header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+/* ----------------------------------------------------- */
+/* 3. FILTROS (Próximos / Todos)                         */
+/* ----------------------------------------------------- */
+.eventos-filters {
+    padding: 20px 80px 0; /* Padding lateral */
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.eventos-filters .btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/* ----------------------------------------------------- */
+/* 4. LISTAGEM DOS CARDS (Estrutura Flexível)             */
+/* ----------------------------------------------------- */
+.eventos-listagem-container {
+    padding: 20px 80px; /* Adapte ao padding do header */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eventos-lista {
+    display: grid;
+    /* Faz as colunas se ajustarem (min: 280px, max: 1fr) */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; 
+    padding-bottom: 50px;
+}
+
+/* ----------------------------------------------------- */
+/* 5. ESTILO DO CARD DE EVENTO                            */
+/* ----------------------------------------------------- */
+.card-evento {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-evento h3 {
+    color: #333; /* Cor escura para o título */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #28a745; /* Linha de destaque verde */
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.card-evento p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* ----------------------------------------------------- */
+/* 6. ESTADOS DE CARREGAMENTO/ERRO                        */
+/* ----------------------------------------------------- */
+.eventos-loading,
+.eventos-error,
+.eventos-empty-state {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #666;
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+}
+
+.eventos-error {
+    color: #dc3545; /* Vermelho para erros */
+    font-weight: bold;
+}

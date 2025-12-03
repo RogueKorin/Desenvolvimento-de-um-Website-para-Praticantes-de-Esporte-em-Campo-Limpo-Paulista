@@ -1,0 +1,115 @@
+/* src/styles/Comunidades.css */
+/* src/styles/Comunidades.css */
+
+/* --- PADRONIZAÇÃO DO HEADER (IGUAL A PÁGINA LOCAIS) --- */
+.header-comunidades {
+    /* Cor principal do cabeçalho */
+    background-color: #28A745; /* Cor Principal */
+    color: #F5F5F5; 
+    padding: 40px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-comunidades h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.header-comunidades p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* O resto do CSS para a página comunidades continua aqui... */
+
+.pagina-comunidades {
+    background-color: #F5F5F5; /* Fundo levemente cinza */
+    min-height: 100vh;
+    position: relative; /* Necessário para posicionar o BotaoCriacao (position: absolute) */
+}
+
+/* Header da Página (Comunidades) */
+.comunidades-principal h1 {
+    font-size: 2em;
+    color: #343A40;
+    margin: 0;
+}
+
+.subtitulo {
+    color: #6c757d;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- Layout Principal (Flexbox) --- */
+.comunidades-layout-principal {
+    display: flex;
+    max-width: 1200px; /* Limita a largura total */
+    margin: 0 auto;
+    padding: 20px 0; /* Padding superior/inferior, sem lateral aqui */
+}
+
+/* Coluna Principal (Filtro e Cards) */
+.comunidades-principal {
+    flex-grow: 1; /* Ocupa o máximo de espaço possível */
+    padding-right: 20px; /* Espaço entre a coluna principal e a sidebar */
+    padding-left: 20px; /* Padding para as bordas da tela */
+}
+
+.comunidades-lista-cards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Coluna da Sidebar (Wraps the SidebarConversas) */
+.comunidades-sidebar-wrapper {
+    flex-shrink: 0; /* Impede que a sidebar diminua */
+    width: 250px; /* Largura definida no CSS da SidebarConversas */
+    /* Garante que o conteúdo da sidebar não seja cortado se o contêiner for menor */
+}
+
+/* Ajuste o BotaoCriacao */
+/* Reajusta a posição do botão flutuante para dentro do layout */
+/* src/styles/Comunidades.css */
+
+/*
+   Ajuste o BotaoCriacao
+   O Botão é posicionado ABSOLUTAMENTE em relação ao PARENT: .pagina-comunidades
+*/
+.botao-criacao-link {
+    /* Mantenha estas propriedades */
+    position: absolute;
+    z-index: 10;
+    
+    /* Reposicionamento CRÍTICO para alinhar à Sidebar */
+    top: 30px; /* Distância do topo */
+    
+    /* CÁLCULO do RIGHT:
+       A sidebar tem 250px de largura.
+       O layout principal tem 20px de padding direito (padding-left: 20px).
+       SidebarWidth (250px) + Padding (20px) = 270px
+       Vamos usar 270px para alinhar o botão no início da sidebar.
+    */
+    right: 270px; 
+}
+
+
+/* SE FOR USAR O HEADER VERDE, REMOVA O BOTÃO DE LÁ */
+/* Se você seguiu o passo anterior e colocou o botão DENTRO do header,
+   retire-o de lá no Comunidades.js e use a estrutura abaixo no CSS:
+*/
+
+/* Media Query para Responsividade */
+@media (max-width: 1000px) {
+    .comunidades-sidebar-wrapper {
+        display: none; /* Esconde a sidebar em telas menores */
+    }
+    
+    .botao-criacao-link {
+        right: 20px; /* Move o botão flutuante para o canto da tela */
+    }
+}

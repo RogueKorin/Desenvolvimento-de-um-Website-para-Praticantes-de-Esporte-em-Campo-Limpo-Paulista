@@ -1,0 +1,248 @@
+
+
+/* Opcional: Para facilitar o box-model */
+* {
+    box-sizing: border-box; 
+}
+
+:root {
+  --cor-principal: #28A745;
+  --cor-suplente: #7ED957;
+  --escala-branco: #F5F5F5;
+  --escala-preto: #343A40;
+  --cor-aviso: #FFC107;
+}
+
+/* Container Principal */
+.agenda-container {
+  min-height: 100vh;
+  background-color: var(--escala-branco);
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;   
+  margin: 0;
+}
+
+/* Header */
+.agenda-header {
+  background-color: var(--cor-principal);
+  color: var(--escala-branco);
+  padding: 40px 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.agenda-header p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Content Layout */
+.agenda-content {
+  display: flex;
+  padding: 40px 60px;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Calendar Wrapper */
+.calendar-wrapper {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Details Panel */
+.event-details-panel {
+  width: 350px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--escala-branco);
+}
+
+.event-details-panel h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--escala-preto);
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--cor-principal);
+  padding-bottom: 10px;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-info p {
+  font-size: 16px;
+  color: var(--escala-preto);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.event-info strong {
+  font-weight: 700;
+  color: var(--cor-principal);
+}
+
+.no-event-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+}
+
+.no-event-selected p {
+  color: #999;
+  font-size: 16px;
+}
+
+/* FullCalendar Customização */
+.fc {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Header do Calendário */
+.fc .fc-toolbar-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--escala-preto);
+}
+
+.fc .fc-button {
+  background-color: var(--cor-principal);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--cor-suplente);
+}
+
+.fc .fc-button:disabled {
+  background-color: #ccc;
+  opacity: 0.6;
+}
+
+.fc .fc-button-active {
+  background-color: var(--escala-preto);
+}
+
+/* Dias da Semana */
+.fc .fc-col-header-cell {
+  background-color: var(--escala-branco);
+  color: var(--escala-preto);
+  font-weight: 700;
+  padding: 15px 0;
+  border: 1px solid #ddd;
+}
+
+/* Células dos Dias */
+.fc .fc-daygrid-day {
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.fc .fc-daygrid-day:hover {
+  background-color: #f9f9f9;
+}
+
+.fc .fc-daygrid-day-number {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--escala-preto);
+}
+
+/* Dia Atual */
+.fc .fc-day-today {
+  background-color: rgba(40, 167, 69, 0.1) !important;
+  border: 2px solid var(--cor-principal) !important;
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  color: var(--cor-principal);
+  font-weight: 700;
+}
+
+/* Eventos */
+.fc-event {
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.fc-event:hover {
+  background-color: var(--cor-suplente);
+  transform: scale(1.02);
+}
+
+.fc-event-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Dias de outros meses */
+.fc .fc-daygrid-day.fc-day-other {
+  background-color: var(--escala-branco);
+}
+
+.fc .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+  color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .agenda-content {
+    flex-direction: column;
+  }
+
+  .event-details-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .agenda-header {
+    padding: 30px 20px;
+  }
+
+  .agenda-header h1 {
+    font-size: 36px;
+  }
+
+  .agenda-content {
+    padding: 20px;
+  }
+
+  .calendar-wrapper {
+    padding: 15px;
+  }
+
+  .event-details-panel {
+    padding: 20px;
+  }
+}

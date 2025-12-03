@@ -1,0 +1,221 @@
+/* src/pages/Profile/UserProfile.css */
+
+.user-profile-wrapper {
+    max-width: 900px; /* Limita a largura máxima do conteúdo geral */
+    margin: 40px auto; /* Centraliza o wrapper na página */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.profile-content-grid {
+    /* REMOVIDO: display: grid; grid-template-columns; */
+    /* Agora será apenas um container flex para centralizar o conteúdo principal */
+    display: flex; /* Adiciona flexbox para o grid para melhor centralização */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    gap: 30px; /* Espaçamento entre os elementos se houver mais de um no futuro */
+}
+
+.profile-info-column {
+    flex-grow: 1; /* Permite que a coluna cresça para ocupar espaço disponível */
+    max-width: 500px; /* Limita a largura da coluna de informações para não esticar demais */
+    width: 100%; /* Garante que ocupe o máximo possível dentro da max-width */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    display: flex; /* Adiciona flexbox para alinhar os itens internos */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* CENTRALIZA os itens da coluna (avatar, inputs) */
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens na seção do avatar */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-avatar {
+    font-size: 8em; /* Ícone maior para avatar */
+    color: #28A745; /* Cor roxa */
+    margin-bottom: 10px;
+}
+
+.profile-id {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 0px; /* Ajuste a posição para cobrir um pouco o ícone */
+    right: -15px; /* Ajuste a posição para cobrir um pouco o ícone */
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.edit-avatar-btn:hover {
+    background-color: #28A745;
+}
+
+/* --- ESTILOS PARA INPUTS E BOTÕES --- */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%; /* Ocupa a largura total do container pai */
+    max-width: 350px; /* Limita a largura dos campos */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+    text-align: left; /* Alinha o label à esquerda */
+    width: 100%; /* Garante que o label ocupe toda a largura */
+}
+
+.input-group input,
+.input-group select {
+    width: 100%; /* Ocupa 100% da largura do input-group */
+    padding: 12px 15px; /* Mais padding para "alongar" */
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Bordas mais suaves */
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex; /* Para alinhar input e botão */
+    align-items: center;
+}
+
+.input-with-icon input {
+    padding-right: 45px; /* Espaço para o ícone do botão */
+}
+
+.edit-field-btn {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    color: #28A745;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.edit-field-btn:hover {
+    color: #28A745;
+}
+
+/* --- POP-UP ESTILOS --- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-content h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.current-avatar-preview {
+    margin-bottom: 20px;
+}
+
+.profile-avatar-large {
+    font-size: 10em; /* Avatar maior no pop-up */
+    color: #28A745;
+}
+
+.current-avatar-preview p {
+    color: #777;
+    margin-top: 10px;
+}
+
+.file-input {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px; /* Limita a largura do input de arquivo */
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-top: 25px;
+}
+
+.popup-actions button {
+    padding: 12px 25px; /* Padding para "alongar" os botões */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 120px; /* Largura fixa para os botões do pop-up */
+}
+
+.cancel-btn {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.cancel-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.save-btn {
+    background-color: #28A745;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #28A745;
+}

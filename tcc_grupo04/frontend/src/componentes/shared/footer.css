@@ -1,0 +1,64 @@
+/* src/components/Footer/Footer.css */
+
+.logged-footer {
+    /* ... estilos de cor, padding, box-sizing: border-box ... */
+    
+    /* 1. ALTURA FIXA: Escolha uma altura que funcione bem (ex: 60px) */
+    height: 60px; 
+    
+    /* 2. Garante que os itens sejam centralizados verticalmente */
+    align-items: center; 
+    
+    /* ... restante dos estilos Flexbox ... */
+    
+    background-color: #343a40; 
+    color: #f5f5f5;
+    padding: 1rem 2rem;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    flex-shrink: 0; 
+}
+
+/* ... o restante dos estilos (links, copyright) ... */
+
+/* ... o restante dos estilos (links, copyright, logo) ... */
+
+/* Container dos Links (Esquerda) */
+.footer-nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #7ED957; /* Cor suplente no hover */
+}
+
+/* Direitos Autorais (Centro) */
+.footer-copyright {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Estilo para a Logotipo Horizontal (Direita) */
+/* src/components/Footer/Footer.css */
+
+.footer-logo-horizontal {
+    /* 1. DEFINE A ALTURA DA LOGO */
+    height: 90px;
+    
+    /* 2. OBRIGA A LARGURA A SE ADAPTAR */
+    width: auto; 
+    
+    /* Opcional: Garante que a logo não distorça se for muito grande */
+    object-fit: contain; 
+}

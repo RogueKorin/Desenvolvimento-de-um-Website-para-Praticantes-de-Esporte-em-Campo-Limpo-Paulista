@@ -1,0 +1,302 @@
+/* CriarEvento.css */
+
+/* Container principal */
+.criar-evento-page {
+  min-height: 100vh;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.criar-evento-logo-img {
+    height: 120px; /* Ajuste a altura conforme a necessidade */
+    width: auto;
+}
+
+/* Card principal */
+.criar-evento-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header com logo e botão voltar */
+.criar-evento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.criar-evento-back-button {
+  background: none;
+  border: none;
+  color: #6C757D;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+.criar-evento-back-button:hover {
+  color: #343A40;
+}
+
+/* Logo */
+.criar-evento-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.criar-evento-logo-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.criar-evento-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.criar-evento-logo-connect {
+  color: #28A745;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.criar-evento-logo-life {
+  color: #343A40;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Título e subtítulo */
+.criar-evento-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #343A40;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.criar-evento-subtitle {
+  font-size: 14px;
+  color: #6C757D;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+/* Formulário */
+.criar-evento-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupos de formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.criar-evento-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.criar-evento-form-half {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels */
+.criar-evento-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #343A40;
+  margin-bottom: 0;
+}
+
+/* Inputs */
+.criar-evento-input,
+.criar-evento-select,
+.criar-evento-textarea {
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.criar-evento-input:focus,
+.criar-evento-select:focus,
+.criar-evento-textarea:focus {
+  border-color: #28A745;
+}
+
+.criar-evento-select {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C757D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.criar-evento-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão de submit */
+.criar-evento-submit {
+  background-color: #28A745;
+  color: #FFFFFF;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.criar-evento-submit:hover {
+  background-color: #229639;
+}
+
+.criar-evento-submit:active {
+  background-color: #1e7e34;
+}
+
+/* Alertas */
+.criar-evento-alert-error {
+  background-color: #FFE6E6;
+  color: #C92A2A;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #FFC9C9;
+}
+
+.criar-evento-alert-info {
+  background-color: #E7F5FF;
+  color: #1971C2;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #A5D8FF;
+}
+
+/* Mensagens de texto auxiliar */
+.form-text {
+  font-size: 13px;
+  color: #6C757D;
+  margin-top: 4px;
+}
+
+/* Loading state */
+.criar-evento-loading {
+  min-height: 100vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.criar-evento-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #E0E0E0;
+  border-top: 4px solid #28A745;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.criar-evento-loading-text {
+  margin-top: 16px;
+  color: #6C757D;
+  font-size: 16px;
+}
+
+/* Mensagem quando não há comunidades */
+.criar-evento-empty-message {
+  color: #6C757D;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .criar-evento-card {
+    padding: 24px;
+  }
+
+  .criar-evento-title {
+    font-size: 24px;
+  }
+
+  .criar-evento-row-group {
+    grid-template-columns: 1fr;
+  }
+
+  .criar-evento-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .criar-evento-logo {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .criar-evento-page {
+    padding: 20px 10px;
+  }
+
+  .criar-evento-card {
+    padding: 20px;
+  }
+
+  .criar-evento-title {
+    font-size: 20px;
+  }
+
+  .criar-evento-subtitle {
+    font-size: 13px;
+  }
+}

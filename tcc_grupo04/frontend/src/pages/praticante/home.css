@@ -1,0 +1,62 @@
+/* src/pages/Home/home.css */
+
+/* TÍTULO DE BOAS-VINDAS */
+.welcome-title {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+/* SEÇÃO DO CARROSSEL */
+.carousel-section {
+    margin-bottom: 3rem;
+}
+
+.carousel-section h2 {
+    font-size: 1.5rem;
+    color: #343A40;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* -------------------------------------- */
+/* LAYOUT DE DUAS COLUNAS (TEXTO) */
+/* -------------------------------------- */
+.text-areas-section {
+    display: flex;
+    gap: 3rem; /* Espaço entre as duas colunas */
+    margin-top: 3rem;
+
+    
+    padding: 0 3rem; /* 3rem de espaço na esquerda e direita */
+}
+
+.text-column {
+    flex: 1; /* Faz com que cada coluna ocupe metade do espaço */
+}
+
+.text-column h2 {
+    font-size: 1.5rem;
+    color: #343A40;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    /* Linha verde debaixo do título, se você quiser seguir o estilo do protótipo de introdução */
+    border-bottom: 2px solid #7ED957; 
+    padding-bottom: 0.5rem;
+}
+
+.text-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* REMOVEMOS OS ESTILOS DO PLACEHOLDER QUE NÃO SÃO MAIS NECESSÁRIOS */
+/* .card-carousel-placeholder { ... }
+.carousel-card { ... }
+*/

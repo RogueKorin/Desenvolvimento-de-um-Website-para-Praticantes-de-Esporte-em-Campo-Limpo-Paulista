@@ -1,0 +1,62 @@
+/* GRID PARA ORGANIZAR OS CARDS */
+.card-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
+}
+
+/* CARD BASE */
+.carousel-card {
+    width: 100%;
+    max-width: 280px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid #E0E0E0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* CARD CLICÁVEL */
+.clickable-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HOVER ANIMAÇÃO */
+.carousel-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    border-color: #7ED957;
+}
+
+/* ÁREA DA IMAGEM (AGORA AUMENTADA) */
+.card-image-wrapper {
+    width: 100%;
+    height: 180px;  /* AUMENTADO */
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* IMAGEM OCUPANDO O MÁXIMO POSSÍVEL */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mostra o máximo da imagem sem distorcer */
+    display: block;
+}
+
+/* TÍTULO DO CARD */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #343A40;
+    margin-top: 0.75rem;
+}

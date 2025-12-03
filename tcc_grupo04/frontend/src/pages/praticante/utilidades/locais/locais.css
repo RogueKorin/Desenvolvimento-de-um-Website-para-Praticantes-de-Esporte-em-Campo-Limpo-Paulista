@@ -1,0 +1,156 @@
+/* src/styles/Locais.css (CORRIGIDO) */
+
+.pagina-locais {
+    background-color: #F5F5F5; /* Fundo geral claro */
+    min-height: 100vh;
+}
+
+/* ----------------------------------------------------- */
+/* 1. HEADER E AÇÕES (BOTÃO DE CRIAÇÃO)                  */
+/* ----------------------------------------------------- */
+.locais-header {
+    background-color: #28a745;
+    color: #F5F5F5;
+    padding: 40px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.locais-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.locais-header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Container para o botão de criar local */
+.locais-actions-container {
+    padding: 20px 80px 0; /* Padding lateral e superior/inferior */
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------- */
+/* 2. LISTAGEM DOS CARDS                                 */
+/* ----------------------------------------------------- */
+.locais-lista-container {
+    padding: 20px 80px;
+    max-width: 1300px; /* Aumenta um pouco para cards maiores */
+    margin: 0 auto;
+}
+
+.locais-lista {
+    padding: 20px 0; /* Ajuste o padding interno */
+    display: grid;
+    /* Usa Grid: Colunas auto-ajustáveis com largura mínima de 300px */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 30px; /* Espaço entre os cards */
+    justify-items: center; /* Centraliza os itens dentro de cada célula do grid */
+}
+
+/* ----------------------------------------------------- */
+/* 3. ESTILO DO CARD (CardLocal)                         */
+/* ----------------------------------------------------- */
+.card-local {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Garante que a imagem arredondada funcione */
+    width: 100%; /* Ocupa a largura total da célula do grid */
+    height: auto; /* Permite que o conteúdo defina a altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-local:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do Card: CORREÇÃO DA ALTURA E PROPORÇÃO */
+.card-local-img {
+    width: 100%;
+    /* Altura fixa para todas as imagens, garante uniformidade */
+    height: 200px; 
+    object-fit: cover; /* Recorta a imagem para cobrir a área sem distorcer */
+    border-bottom: 1px solid #eee;
+}
+
+.card-local-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que o corpo ocupe o espaço restante */
+}
+
+.card-local-body h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-local-body p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.card-local-body p i {
+    margin-right: 8px;
+    color: #28a745; /* Ícone verde */
+}
+
+/* Estilo para o botão de apagar do Admin */
+.btn-delete-admin {
+    /* Usa a cor do 'danger' mas com um foco no contraste */
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Empurra o botão para a parte inferior do card-body */
+    width: 100%; /* Ocupa a largura total do card-body */
+}
+
+.btn-delete-admin:hover {
+    background-color: #c82333;
+}
+
+/* ----------------------------------------------------- */
+/* 4. FORMULÁRIO DE CRIAÇÃO (Para corrigir o estilo)      */
+/* ----------------------------------------------------- */
+.local-creation-form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.local-creation-form-container form {
+    /* Garante que o formulário seja legível */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------------------- */
+/* 5. ESTADOS (Loading/Empty/Error)                      */
+/* ----------------------------------------------------- */
+.locais-loading,
+.locais-error,
+.locais-empty-state {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #666;
+    /* Garante que a mensagem ocupe toda a largura */
+    width: 100%; 
+}

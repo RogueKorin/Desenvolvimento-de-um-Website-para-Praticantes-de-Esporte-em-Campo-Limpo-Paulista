@@ -1,0 +1,108 @@
+/* src/styles/CardLocal.css */
+
+.card-local {
+    /* Dimensões e Layout */
+    width: 280px; /* Ajuste conforme o layout final desejado */
+    background-color: #FFFFFF; /* Fundo branco puro para destaque contra o #F5F5F5 */
+    border-radius: 12px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a imagem se ajuste à borda do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card-local:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+/* Área da Imagem (o cinza mais claro do seu wireframe) */
+.card-local__imagem {
+    height: 180px;
+    background-color: #CCCCCC; /* Cor temporária para o placeholder */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-local__conteudo {
+    padding: 15px;
+    color: #343A40; /* Cor para o texto */
+}
+
+.card-local__nome {
+    font-size: 1.2em;
+    color: #343A40; /* Cor de título, escuro */
+    margin-bottom: 5px;
+}
+
+.card-local__endereco {
+    font-size: 0.9em;
+    color: #6c757d; /* Um cinza mais suave para o endereço */
+    margin-bottom: 10px;
+}
+
+/* Estilo para a Comodidade */
+.card-local__comodidade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-local__status-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    /* A cor será definida pelas classes 'ativo' e 'inativo' */
+}
+
+.card-local__comodidade .ativo {
+    background-color: #7ED957; /* Verde Limão para status "OK" ou ativo */
+}
+
+.card-local__comodidade .inativo {
+    background-color: #dc3545; /* Vermelho para status "X" ou indisponível */
+}
+
+
+/* Estilo para o Botão "Ver detalhes" (agora Link) */
+/* Aplicamos o estilo à classe, não à tag button */
+.card-local__botao-detalhes { 
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28A745; /* Seu verde primário */
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* Garante que pareça um botão, não um link */
+    transition: background-color 0.2s;
+}
+
+.card-local__botao-detalhes:hover {
+    background-color: #1e7e34; /* Verde escuro no hover */
+}
+
+/* ======================================================= */
+/* NOVO: Estilo para o Botão "Apagar Comunidade" (vermelho) */
+/* ======================================================= */
+.card-local__botao-apagar { 
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #DC3545; /* Vermelho para ação de Perigo */
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.card-local__botao-apagar:hover {
+    background-color: #C82333; /* Vermelho mais escuro no hover */
+}

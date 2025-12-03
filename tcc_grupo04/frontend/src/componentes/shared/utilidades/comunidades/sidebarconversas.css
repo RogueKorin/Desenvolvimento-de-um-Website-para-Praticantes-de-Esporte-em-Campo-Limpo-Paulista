@@ -1,0 +1,26 @@
+/* src/styles/SidebarConversas.css */
+
+.sidebar-conversas {
+    width: 250px; /* Largura da coluna */
+    background-color: #FFFFFF; /* Fundo branco */
+    border-left: 1px solid #e0e0e0; /* Separador sutil da lista principal */
+    height: 100vh; /* Ocupa a altura total da tela */
+    position: sticky; /* Mantém a sidebar visível ao rolar */
+    top: 0;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-conversas__titulo {
+    font-size: 1.2em;
+    color: #343A40;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5F5F5;
+}
+
+.sidebar-conversas__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

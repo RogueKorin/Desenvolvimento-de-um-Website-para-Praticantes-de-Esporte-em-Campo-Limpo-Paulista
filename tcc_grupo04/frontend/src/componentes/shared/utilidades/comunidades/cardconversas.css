@@ -1,0 +1,61 @@
+/* src/styles/CardConversa.css */
+
+.card-conversa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #F5F5F5; /* Fundo claro para o item */
+    text-decoration: none; /* Remove sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 1px solid #F5F5F5;
+}
+
+.card-conversa:hover {
+    background-color: #e9ecef; /* Sutil destaque ao passar o mouse */
+}
+
+/* Destaque para conversas novas/não lidas (usando Cor Suplementar: #7ED957) */
+.card-conversa--nova {
+    border: 1px solid #7ED957; /* Borda com a Cor Suplementar */
+}
+
+.card-conversa__conteudo {
+    /* Garante que o texto se alinhe e use o espaço */
+    overflow: hidden; 
+}
+
+.card-conversa__titulo {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #343A40;
+    margin: 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-conversa__mensagem {
+    font-size: 0.8em;
+    color: #6c757d;
+    margin: 2px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-conversa__notificacao {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #7ED957; /* Cor Suplementar */
+    color: #343A40;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
